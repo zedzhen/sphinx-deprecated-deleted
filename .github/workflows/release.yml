@@ -71,4 +71,4 @@ jobs:
       - name: Publish release to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         env:
-          url: https://pypi.org/p/sphinx-conf-locale
+          url: https://pypi.org/p/sphinx-deprecated-deleted/
