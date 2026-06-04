@@ -2,7 +2,6 @@
 requires = [
     "setuptools>=82.0.1",
     "gitversion_simple~=1.1",
-    "babel~=2.18",
 ]
 
 [project]
