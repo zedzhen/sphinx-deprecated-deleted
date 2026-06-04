@@ -1,4 +1,7 @@
+from typing import cast
+
 from docutils.nodes import Node
+from sphinx.addnodes import versionmodified
 from sphinx.domains.changeset import VersionChange, versionlabel_classes, versionlabels
 from sphinx.locale import get_translation
 
@@ -15,4 +18,7 @@ class DeprecatedRemoved(VersionChange):
 
     def run(self) -> list[Node]:
         self.arguments = [tuple(self.arguments)]
-        return super().run()
+        nodes = super().run()
+        if (type_ := self.config.deprecated_removed_type) is not None:
+            cast(versionmodified, nodes[0])["type"] = type_
+        return nodes

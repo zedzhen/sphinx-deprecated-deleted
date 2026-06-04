@@ -1,6 +1,6 @@
-## v1.0.2 (unreleased)
+## v1.1.0 (unreleased)
 
-* There are no changes yet
+* add config "deprecated_removed_type", for change class for directive deprecated-delete
 
 ## v1.0.1 (04.06.2026)
 

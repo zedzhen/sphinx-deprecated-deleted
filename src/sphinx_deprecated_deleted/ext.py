@@ -12,6 +12,7 @@ def setup(app: Sphinx) -> dict[str, Any]:
     locale_dir = Path(__file__).resolve().parent / locales_dir
     app.add_message_catalog(ext_name, locale_dir)
     app.add_directive(directive_name, DeprecatedRemoved)
+    app.add_config_value("deprecated_removed_type", None, "env")
     return {
         "version": version(ext_name),
         "parallel_read_safe": True,
