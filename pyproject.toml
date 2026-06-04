@@ -1,0 +1,47 @@
+[build-system]
+requires = [
+    "setuptools>=82.0.1",
+    "gitversion_simple~=1.1",
+    "babel~=2.18",
+]
+
+[project]
+name = "sphinx-deprecated-deleted"
+description = "Adds directive deprecated-removed for sphinx"
+readme = "readme.md"
+requires-python = ">=3.10"
+license = "Zlib"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Ярыкин Евгений", email = "pypi@zedzhen.ru" }
+]
+dependencies = [
+    'sphinx>=8,<10',
+]
+dynamic = ["version"]
+
+[project.urls]
+source = "https://github.com/zedzhen/sphinx-deprecated-deleted"
+
+[project.optional-dependencies]
+dev = [
+    'black~=26.5',
+    'isort~=8.0',
+    "build==1.5.*",
+    "pre-commit~=4.6",
+    "babel~=2.18",
+]
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+combine_as_imports = true
+
+[tool.versioningit.next-version]
+method = "simple"
+
+[tool.versioningit.format]
+method = "simple"
