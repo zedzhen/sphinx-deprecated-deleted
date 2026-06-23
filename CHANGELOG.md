@@ -1,6 +1,6 @@
-## v1.1.1 (unreleased)
+## unreleased
 
-* There are no changes yet
+* Update gitversion_simple from ~=1.1 to ~=2.0
 
 ## v1.1.0 (04.06.2026)
 

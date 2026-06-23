@@ -1,7 +1,7 @@
 [build-system]
 requires = [
     "setuptools>=82.0.1",
-    "gitversion_simple~=1.1",
+    "gitversion_simple[setuptools]~=2.0",
     "babel~=2.18",
 ]
 
@@ -39,9 +39,3 @@ line-length = 120
 profile = "black"
 line_length = 120
 combine_as_imports = true
-
-[tool.versioningit.next-version]
-method = "simple"
-
-[tool.versioningit.format]
-method = "simple"
